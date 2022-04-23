@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.utils";
 import FormInput from "../form-input/form-input.component";
 import "./sign-up-form.styles.scss";
-
+import { UserContext } from "./../../context/user.context";
 import Button from "../button/button.component";
 
 const formFieldInitialState = {
@@ -19,6 +19,8 @@ const SignUpForm = () => {
   const [formFields, setFormFields] = useState(formFieldInitialState);
 
   const { displayName, email, password, confirmPassword } = formFields;
+
+  const { setCurrentUser } = useContext(UserContext);
 
   const resetFormFields = () => {
     setFormFields(formFieldInitialState);
@@ -50,7 +52,9 @@ const SignUpForm = () => {
       user.photoURL =
         "https://ccbs.uci.edu/wp-content/uploads/sites/3/2022/03/no-user-image-icon-27.png";
 
-      const userDocRef = await createUserDocumentFromAuth(user);
+      setCurrentUser(user);
+
+      await createUserDocumentFromAuth(user);
       resetFormFields();
     } catch (error) {
       console.log(error);

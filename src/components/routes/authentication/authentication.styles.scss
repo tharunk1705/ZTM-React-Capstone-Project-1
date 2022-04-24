@@ -4,3 +4,12 @@
   width: 900px;
   margin: 30px auto;
 }
+
+@media (max-width: 600px) {
+  .authentication-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
+}

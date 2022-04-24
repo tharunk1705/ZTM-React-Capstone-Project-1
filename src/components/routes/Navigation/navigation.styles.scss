@@ -26,10 +26,9 @@
       cursor: pointer;
     }
   }
-
-  .outlet-container {
-    height: calc(100vh - 95px);
-    overflow: auto;
-    scroll-behavior: smooth;
-  }
+}
+.outlet-container {
+  height: calc(100vh - 95px);
+  overflow: auto;
+  scroll-behavior: smooth;
 }

@@ -30,5 +30,6 @@
   .outlet-container {
     height: calc(100vh - 95px);
     overflow: auto;
+    scroll-behavior: smooth;
   }
 }

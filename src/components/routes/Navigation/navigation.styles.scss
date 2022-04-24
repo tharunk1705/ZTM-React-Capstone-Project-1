@@ -26,4 +26,9 @@
       cursor: pointer;
     }
   }
+
+  .outlet-container {
+    height: calc(100vh - 95px);
+    overflow: auto;
+  }
 }

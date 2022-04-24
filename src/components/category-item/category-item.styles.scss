@@ -8,6 +8,7 @@
   border: 1px solid black;
   margin: 0 7.5px 15px;
   overflow: hidden;
+  position: relative;
 
   &:hover {
     cursor: pointer;
@@ -42,8 +43,9 @@
   }
 
   .category-body-container {
+    width: 80%;
     height: 90px;
-    padding: 0 25px;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;

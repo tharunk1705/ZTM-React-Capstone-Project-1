@@ -28,7 +28,9 @@ const Navigation = () => {
           )}
         </div>
       </div>
-      <Outlet />
+      <div className="outlet-container">
+        <Outlet />
+      </div>
     </>
   );
 };

@@ -15,6 +15,7 @@
   cursor: pointer;
   display: flex;
   justify-content: center;
+  margin: 0 10px 0 0;
 
   &:hover {
     background-color: white;
@@ -42,5 +43,11 @@
       color: white;
       border: none;
     }
+  }
+}
+
+@media (max-width: 600px) {
+  .button-container {
+    margin: 10px 0;
   }
 }

@@ -1,0 +1,14 @@
+.category1-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  row-gap: 50px;
+  margin: 30px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 600px) {
+  .category1-container {
+    grid-template-columns: 100%;
+  }
+}

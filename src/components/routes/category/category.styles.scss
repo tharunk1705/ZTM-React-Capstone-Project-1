@@ -1,4 +1,11 @@
-.category1-container {
+.category-title {
+  font-size: 38px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.category-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
@@ -8,7 +15,7 @@
 }
 
 @media (max-width: 600px) {
-  .category1-container {
+  .category-container {
     grid-template-columns: 100%;
   }
 }

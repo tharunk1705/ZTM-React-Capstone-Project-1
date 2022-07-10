@@ -5,6 +5,7 @@ import {
 } from "../../utils/firebase/firebase.utils";
 import FormInput from "../form-input/form-input.component";
 import "./sign-in-form.styles.scss";
+import { ReactComponent as GoogleLogo } from "./../../assets/google-icon.svg";
 
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 import { useNavigate } from "react-router-dom";
@@ -93,7 +94,10 @@ const SignInForm = () => {
             buttonType={BUTTON_TYPE_CLASSES.google}
             onClick={signInwithGoogle}
           >
-            Google - Sign In
+            <span className="google-icon">
+              <GoogleLogo />
+            </span>
+            Sign In
           </Button>
         </div>
       </form>
